@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@font-face {
+  font-family: 'Gunplay', sans-serif;
+  src: url('font/gunplay/Gunplay-Regular.tff.woff');
+}
+
+* {
+  font-family: 'Oswald', sans-serif;
+}
