@@ -7,7 +7,9 @@
 
 * {
   font-family: 'Oswald', sans-serif;
+  margin: 0;
 }
+
 
 .container {
   max-width: 100%;
@@ -18,13 +20,17 @@
     grid-column: 1/all;
     grid-row: 1;
     text-align: right;
-    background-color: lightGray;
-    height: 3.5em;
+    background-color: #f2f2f2;
+    padding: 0.5em 0;
     padding-right: 1em;
+    p {
+      cursor: pointer;
+    }
   }
   &__nav {
      grid-column: 1/all;
-     grid-row: 2;
+     display: grid;
+     grid-template-columns: 1fr 2fr auto;
      &__list {
        list-style-type: none;
        margin: 0;
@@ -32,20 +38,22 @@
        overflow: hidden;
        grid-column: 2;
        max-width: 100%;
-       background-color: green;
        &__item {
          display: inline-grid;
          padding: 12px 20px;
        }
      }
+     
      &__logo {
-       grid-column: 1;
        height: auto;
        max-width: 100%;
-       vertical-align: middle;
+       margin-top: -2.5em;
+       grid-column: 1;
+       position: absolute;
      }
     &__boodschappenlijst {
       grid-column: 3;
+      padding-right: 1em;
       &__button {
         background-color: #f8a230;
         color: #fff;
@@ -60,12 +68,13 @@
         vertical-align: baseline;
         white-space: nowrap;
         border: none;
+        height: 100%;
       }
     }
   }
   &__banner  {
     grid-column: 1/all;
-    grid-row: 3;
+    margin-bottom: 1em;
     &__img {
       max-width: 100%;
     }
@@ -73,21 +82,101 @@
   &__ingredienten {
     grid-column: 1;
     grid-row: 4;
+    padding-left: 1em;
+    &__title {
+      border-bottom: 3px dashed orange;
+    }
+    &__list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      margin-bottom: 1em;
+      &__item {
+        border-bottom: 1px groove lightgray;
+      }
+    }
+    &__button {
+      background-color: #f8a230;
+      color: #fff;
+      font-family: "oswald",arial,sans-serif;
+      font-size: 100%;
+      padding: 0.5em 1em 0.5em 1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+      line-height: normal;
+      text-align: center;
+      vertical-align: baseline;
+      white-space: nowrap;
+      border: none;
+    }
   }
   &__receptInfo {
+    padding-left: 1em;
     grid-column: 2/3;
     grid-row: 4;
+    &__title {
+      padding-right: 1em;
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+      grid-column-gap: 0.5em;
+      margin-top: -0.38em;
+      padding-bottom: 0.2em;
+      border-bottom: 3px dashed orange;
+      &__head {
+        color: orange;
+      }
+      &__save {
+        background-color: #f8a230;
+        color: #fff;
+        font-family: "oswald",arial,sans-serif;
+        font-size: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        text-align: center;
+        vertical-align: baseline;
+        white-space: nowrap;
+        border: none;
+      }
+      &__print {
+        background-color: black;
+        color: #fff;
+        font-family: "oswald",arial,sans-serif;
+        font-size: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        text-align: center;
+        vertical-align: baseline;
+        white-space: nowrap;
+        border: none;
+      }
+    }
+    &__strong {
+      margin: 0.2em 0;
+      display: block;
+    }
+    &__kop {
+      margin: 1em 0;
+    }
+    &__list {
+      margin: 0.5em 0;
+      list-style: none;
+    }
   }
   &__footer {
     grid-column: 1/all;
     grid-row: 5;
     &__bottom {
       max-width: 100%;
-      grid-column: 1;
+      background-color: #F59225;
       &__right {
         &__img {
           max-width: 100%;
-          grid-column: 2/all;
         }
       }
     }
