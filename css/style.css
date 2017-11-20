@@ -3,10 +3,14 @@
   font-family: 'Gunplay', sans-serif;
   src: url("font/gunplay/Gunplay-Regular.tff.woff"); }
 * {
-  font-family: 'Oswald', sans-serif;
   margin: 0; }
 
+button {
+  cursor: pointer;
+  outline: none; }
+
 .container {
+  font-family: 'Oswald', sans-serif;
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr auto;
@@ -33,7 +37,8 @@
       max-width: 100%; }
       .container__nav__list__item {
         display: inline-grid;
-        padding: 12px 20px; }
+        padding: 12px 20px;
+        cursor: pointer; }
     .container__nav__logo {
       height: auto;
       max-width: 100%;
@@ -92,6 +97,7 @@
       white-space: nowrap;
       border: none; }
   .container__receptInfo {
+    font-family: 'Gunplay', sans-serif;
     padding-left: 1em;
     grid-column: 2/3;
     grid-row: 4; }
@@ -131,6 +137,20 @@
         vertical-align: baseline;
         white-space: nowrap;
         border: none; }
+    .container__receptInfo__button {
+      background-color: #cccccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #fff;
+      display: inline-block;
+      height: 40px;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 7px 15px 9px;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: all 0.25s ease-in 0s, all 0.25s ease-out 0s;
+      white-space: nowrap; }
     .container__receptInfo__strong {
       margin: 0.2em 0;
       display: block; }
@@ -142,10 +162,26 @@
   .container__footer {
     grid-column: 1/all;
     grid-row: 5; }
+    .container__footer__widgets {
+      padding: 0 5em 10em 5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+      .container__footer__widgets__item1 {
+        grid-column: 1; }
+      .container__footer__widgets__item2 {
+        grid-column: 2; }
+      .container__footer__widgets__item3 {
+        grid-column: 3; }
+      .container__footer__widgets__item4 {
+        grid-column: 4; }
     .container__footer__bottom {
       max-width: 100%;
-      background-color: #F59225; }
-      .container__footer__bottom__right__img {
-        max-width: 100%; }
+      background-color: #F59225;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .container__footer__bottom__right {
+        grid-column: 2; }
+        .container__footer__bottom__right__img {
+          max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,12 +6,16 @@
 }
 
 * {
-  font-family: 'Oswald', sans-serif;
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+  outline: none;
+}
 
 .container {
+  font-family: 'Oswald', sans-serif;
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr auto;
@@ -41,6 +45,7 @@
        &__item {
          display: inline-grid;
          padding: 12px 20px;
+         cursor: pointer;
        }
      }
      
@@ -113,6 +118,7 @@
     }
   }
   &__receptInfo {
+    font-family: 'Gunplay', sans-serif;
     padding-left: 1em;
     grid-column: 2/3;
     grid-row: 4;
@@ -156,6 +162,21 @@
         border: none;
       }
     }
+    &__button {
+      background-color: #cccccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #fff;
+      display: inline-block;
+      height: 40px;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 7px 15px 9px;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: all 0.25s ease-in 0s, all 0.25s ease-out 0s;
+      white-space: nowrap;
+    }
     &__strong {
       margin: 0.2em 0;
       display: block;
@@ -171,10 +192,30 @@
   &__footer {
     grid-column: 1/all;
     grid-row: 5;
+    &__widgets {
+      padding: 0 5em 10em 5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      &__item1 {
+        grid-column: 1;
+      }
+      &__item2 {
+        grid-column: 2;
+      }
+      &__item3 {
+        grid-column: 3;
+      }
+      &__item4 {
+        grid-column: 4;
+      }
+    }
     &__bottom {
       max-width: 100%;
       background-color: #F59225;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &__right {
+        grid-column: 2;
         &__img {
           max-width: 100%;
         }
